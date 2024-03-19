@@ -33,7 +33,7 @@ int main()
 
 			if (socket.receive(buffer, sizeof(buffer), received, sender, senderPort) == sf::Socket::Done)
 			{
-				LOG("Received " << buffer << " from " << sender << ':' << senderPort);
+				LOG("Received " << buffer << " from " << sender << ':' << senderPort << " in " << timeout.getElapsedTime().asMilliseconds() << " ms.");
 				break;
 			}
 		}
